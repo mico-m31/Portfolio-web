@@ -44,7 +44,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /path/to/your/docker-compose   # <-- CHANGE this to your actual folder
+            cd /root
             docker login --username ${{ secrets.ACR_USERNAME }} ${{ secrets.ACR_REGISTRY_URL }} -p ${{ secrets.ACR_PASSWORD }}
             docker compose pull
             docker compose up -d
