@@ -1,26 +1,27 @@
-name: CI/CD Deployment
+name: Build & Push to ACR
 
 on:
   push:
-    branches:
-      - main  # or master
+    branches: [ main ]
 
 jobs:
-  deploy:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Connect & Deploy via SSH
-      uses: appleboy/ssh-action@v1.2.0
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          cd /path/to/your/project
-          git pull origin main
-          docker compose down
-          docker compose up -d --build
+      - name: Log in to ACR
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+          registry: ${{ secrets.ACR_REGISTRY_URL }}
+
+      - name: Build & Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.ACR_REGISTRY_URL }}/midexam/portfolio:frontend
