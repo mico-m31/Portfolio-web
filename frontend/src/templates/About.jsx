@@ -6,6 +6,7 @@ function About(){
         <p className="text-white">Automation test</p>
         <p> TEst LAgi</p>   
         <p>TEst Lagi Wak</p>
+        <p>Test yang kelima kalinya</p>
         </>
     )
 }
