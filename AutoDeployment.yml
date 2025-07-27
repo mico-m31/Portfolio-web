@@ -1,0 +1,26 @@
+name: CI/CD Deployment
+
+on:
+  push:
+    branches:
+      - main  # or master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Connect & Deploy via SSH
+      uses: appleboy/ssh-action@v1.2.0
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd /path/to/your/project
+          git pull origin main
+          docker compose down
+          docker compose up -d --build
