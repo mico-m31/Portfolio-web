@@ -1,0 +1,50 @@
+name: Build & Deploy to Server
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # --- Login to ACR ---
+      - name: Log in to ACR
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+          registry: ${{ secrets.ACR_REGISTRY_URL }}
+
+      # --- Build & Push FRONTEND ---
+      - name: Build & Push FRONTEND
+        uses: docker/build-push-action@v5
+        with:
+          context: ./frontend
+          push: true
+          tags: ${{ secrets.ACR_REGISTRY_URL }}/midexam/portfolio:frontend
+
+      # --- Build & Push BACKEND ---
+      - name: Build & Push BACKEND
+        uses: docker/build-push-action@v5
+        with:
+          context: ./backend
+          push: true
+          tags: ${{ secrets.ACR_REGISTRY_URL }}/midexam/portfolio:backend
+
+      # --- SSH & Deploy ---
+      - name: Deploy on Server via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /path/to/your/docker-compose   # <-- CHANGE this to your actual folder
+            docker login --username ${{ secrets.ACR_USERNAME }} ${{ secrets.ACR_REGISTRY_URL }} -p ${{ secrets.ACR_PASSWORD }}
+            docker compose pull
+            docker compose up -d
