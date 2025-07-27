@@ -3,6 +3,8 @@ function About(){
         <>
         <p className="text-white">Automation test</p>
         <p> TEst LAgi</p>
+        <p className="text-white">Automation test</p>
+        <p> TEst LAgi</p>   
         </>
     )
 }
