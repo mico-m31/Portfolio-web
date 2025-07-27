@@ -28,7 +28,7 @@ function Contacts() {
         message: emailData.message,
       };
       
-      fetch("https://micomartin.my.id:8081/api/sendEmail", {
+      fetch("/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
