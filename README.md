@@ -1,1 +1,1 @@
-staging environment domain = micomartin.my.id
+staging environment domain = https://micomartin.my.id
