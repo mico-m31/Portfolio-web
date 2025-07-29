@@ -21,6 +21,7 @@ function AppContent() {
       hover:after:w-full
       after:transition-all after:duration-300
       hover:after:bg-purple-600
+      active:after:w-full
     ">About Me</Link></li>
         <li><Link to="/projects" className="
       relative text-white hover:text-gray-400 transition duration-300
