@@ -20,7 +20,7 @@ function Home() {
         </p>
 
         <motion.a
-          href="#about"
+          href="/about"
           whileHover={{ scale: 1.05, backgroundColor: "#9333ea" }}
           whileTap={{ scale: 0.95 }}
           className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 shadow-lg group"
