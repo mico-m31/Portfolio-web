@@ -16,8 +16,7 @@ function Home() {
         </div>
 
         <p className="text-gray-400 mb-6 leading-relaxed">
-          I'm a passionate web developer focused on creating responsive, user-friendly websites and apps.
-          Let's build something amazing together!
+          I'm a passionate Backend Developer and Network Engineer Enthusiast with a focus on building secure and efficient systems. My journey in technology has been driven by a desire to connect people and ideas through robust network solutions and backend services.
         </p>
 
         <motion.a

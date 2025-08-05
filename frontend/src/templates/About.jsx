@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import foto from "../assets/unnamed.jpg";
 
 function About() {
   return (
@@ -18,7 +19,7 @@ function About() {
         <div className="flex flex-col lg:flex-row gap-8 lg:items-stretch">
           <img
             className="mx-auto w-full max-w-[15rem] sm:max-w-[20rem] h-auto sm:h-[23em] rounded-lg object-cover border-4 border-purple-600 shadow-md shadow-purple-700/50"
-            src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=300"
+            src={foto}
             alt="Profile"
           />
 
