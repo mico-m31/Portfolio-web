@@ -6,8 +6,8 @@ import About from './templates/About';
 import Projects from './templates/Projects';
 import Contacts from './templates/Contacts';
 import Home from './templates/Home';
+import Resume from './templates/Resume';
 
-// -------------------- Background Animation --------------------
 function Background() {
   return (
     <div className="fixed inset-0 overflow-hidden z-[-1]">
@@ -30,7 +30,6 @@ function Background() {
   );
 }
 
-// -------------------- Navbar --------------------
 function AppContent() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,7 +44,6 @@ function AppContent() {
         <Link to="/">Portfolio</Link>
       </h1>
 
-      {/* Hamburger - mobile only */}
       <div className="md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -67,15 +65,13 @@ function AppContent() {
         </button>
       </div>
 
-      {/* Desktop Links */}
       <ul className="hidden md:flex space-x-12 text-white">
         <li><NavLinkItem to="/about">About Me</NavLinkItem></li>
         <li><NavLinkItem to="/projects">Projects</NavLinkItem></li>
-        <li><NavLinkItem to="/certification">Resume</NavLinkItem></li>
+        <li><NavLinkItem to="/resume">Resume</NavLinkItem></li>
         <li><NavLinkItem to="/contact">Contact</NavLinkItem></li>
       </ul>
 
-      {/* Animated Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.ul
@@ -87,7 +83,7 @@ function AppContent() {
           >
             <li><NavLinkItem onClick={() => setIsOpen(false)} to="/about">About Me</NavLinkItem></li>
             <li><NavLinkItem onClick={() => setIsOpen(false)} to="/projects">Projects</NavLinkItem></li>
-            <li><NavLinkItem onClick={() => setIsOpen(false)} to="/certification">Resume</NavLinkItem></li>
+            <li><NavLinkItem onClick={() => setIsOpen(false)} to="/Resume">Resume</NavLinkItem></li>
             <li><NavLinkItem onClick={() => setIsOpen(false)} to="/contact">Contact</NavLinkItem></li>
           </motion.ul>
         )}
@@ -116,7 +112,6 @@ function NavLinkItem({ to, children, onClick }) {
   );
 }
 
-// -------------------- Main App --------------------
 
 function App() {
   return (
@@ -131,6 +126,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contacts />} />
+            <Route path="/resume" element={<Resume />} />
           </Routes>
         </AnimatePresence>
       </div>

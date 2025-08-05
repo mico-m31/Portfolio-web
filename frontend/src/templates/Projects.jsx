@@ -9,7 +9,7 @@ function Projects() {
     {
       id: 1,
       title: "Cyber Security Education Platform",
-      description: "Interactive learning platform for modern cybersecurity skills with hands-on labs and real-world scenarios.",
+      description: "Collaborative project with Icon+ PLN to create a platform for cybersecurity education and training.",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop&auto=format",
       technologies: ["HTML", "Tailwind CSS", "MySQL", "Golang","Docker"],
       liveUrl: "#",
@@ -27,12 +27,21 @@ function Projects() {
     {
       id: 3,
       title: "Portfolio Website",
-      description: "Collaborative project management tool with real-time updates and team collaboration features.",
+      description: "A personal portfolio website to showcase my projects and skills.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop&auto=format",
       technologies: ["React", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#",
     },
+    {
+      id:4,
+      title: "Student Enrollment System",
+      description: "A mobile application for managing student enrollments",
+      image: "https://images.unsplash.com/photo-1584697964216-7b8f0c1d2c3f?w=400&h=250&fit=crop&auto=format",
+      technologies: ["Java", "SQLite"],
+      liveUrl: "#",
+      githubUrl: "#",
+    }
   ];
 
   return (
@@ -42,7 +51,7 @@ function Projects() {
       exit={{ opacity: 0, y: -30 }}
       transition={{ duration: 0.5 }}
     >
-    <div className="flex justify-center items-start min-h-[calc(100vh-25rem)] p-4 py-8">
+    <div className="flex justify-center items-start min-h-[calc(100vh-25rem)] p-4 py-20">
       <div className="text-white bg-purple-800/30 rounded-md  w-full max-w-7xl p-4 sm:p-6 lg:p-8 shadow-xl shadow-purple-900/40  ">
         
         <div className="flex flex-col justify-center items-center space-y-2 sm:space-y-4 mb-6 sm:mb-8 lg:mb-10">
