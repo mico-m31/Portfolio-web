@@ -18,7 +18,7 @@ function Projects() {
     {
       id: 2,
       title: "Personal Finance Tracker",
-      description: "Comprehensive money management app with budgeting tools, expense tracking, and financial insights.",
+      description: "Comprehensive money management app with budgeting tools, and expense tracking",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop&auto=format",
       technologies: ["React", "Golang", "PostgreSQL", "Chart.js", "Docker"],
       liveUrl: "#",
@@ -26,40 +26,13 @@ function Projects() {
     },
     {
       id: 3,
-      title: "Task Management System",
+      title: "Portfolio Website",
       description: "Collaborative project management tool with real-time updates and team collaboration features.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop&auto=format",
-      technologies: ["React", "Firebase", "Tailwind CSS"],
+      technologies: ["React", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#",
     },
-    {
-      id: 4,
-      title: "Weather Dashboard",
-      description: "Beautiful weather app with detailed forecasts, interactive maps, and location-based alerts.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop&auto=format",
-      technologies: ["JavaScript", "API Integration", "CSS Grid"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 5,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&auto=format",
-      technologies: ["Next.js", "Stripe", "Prisma", "MySQL"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 6,
-      title: "AI Chat Assistant",
-      description: "Intelligent chatbot with natural language processing and machine learning capabilities.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&auto=format",
-      technologies: ["Python", "TensorFlow", "Flask", "OpenAI API"],
-      liveUrl: "#",
-      githubUrl: "#",
-    }
   ];
 
   return (
@@ -79,12 +52,12 @@ function Projects() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="group relative bg-black/40 border-2 border-purple-600 rounded-xl overflow-hidden hover:border-purple-400 hover:scale-[1.02] transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
-            >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="group relative bg-black/40 border-2 border-purple-600 rounded-xl overflow-hidden hover:border-purple-400 hover:scale-[1.02] transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+              >
               
               <div className="relative overflow-hidden">
                 <img

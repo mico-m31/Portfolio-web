@@ -94,7 +94,7 @@ function Contacts() {
           <div className="flex flex-col space-y-4 sm:space-y-6">
             <input
               type="text"
-              placeholder="Name"
+              placeholder="Name / Email"
               name="name"
               value={emailData.name}
               onChange={(e) =>
