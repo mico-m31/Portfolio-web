@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CV from "../assets/Resume_Mico-Martin..pdf";
+import pdf from "../assets/pdf.png";
+import { FaFilePdf } from "react-icons/fa6";
 
 function Resume() {
   return (
@@ -12,26 +14,29 @@ function Resume() {
       className="flex justify-center px-4 pt-20 pb-20"
     >
       <div className="w-full max-w-4xl text-white bg-purple-800/30 backdrop-blur-sm p-6 sm:p-10 rounded-xl shadow-xl shadow-purple-900/30 space-y-8 text-justify">
-        <div>
-          <h2 className="flex text-xl font-semibold mb-2">
-            Summary
-            <div className="flex flex-1 justify-end">
-              <a
-                href={CV}
-                target="_blank" 
-                download = "Resume_Mico-Martin.pdf"
-                className="bg-purple-700 hover:bg-purple-600 transition text-white px-2 rounded-md "
-              >
-                Download CV
-                <img src="/download-icon.svg" alt="Download CV" className="w-5 h-5 inline-block mr-2" />
-              </a>
-            </div>
+       <div>
+  <h2 className="flex text-xl font-semibold mb-2">
+    Summary
+    <div className="flex flex-1 justify-end">
+      <a
+        href={CV}
+        target="_blank"
+        download="Resume_Mico-Martin.pdf"
+        className="flex items-center gap-2 bg-purple-700 hover:bg-purple-600 transition text-white px-3 py-2 rounded-md"
+      >
+        <FaFilePdf className="text-pink-600 w-5 h-5" />
+        Download CV
+      </a>
+    </div>
           </h2>
 
           <p className="text-justify">
-            Final-year Informatics student specializing in network engineering
-            and backend development with Go. Experienced in Docker, PostgreSQL,
-            CICD pipelines, and passionate about network-driven infrastructure.
+            final-year Informatics student with a solid foundation in networking
+            and a strong problem-solving mindset. I am eager to apply and
+            further develop my skills by supporting infrastructure maintenance
+            and contributing to the development of robust and secure systems.
+            Motivated to face real-world challenges and grow through hands-on
+            experience in a professional environment.
           </p>
         </div>
 

@@ -41,7 +41,7 @@ function AppContent() {
       className="p-4 flex justify-between items-center bg-transparent fixed top-0 left-0 right-0 z-50 backdrop-blur-md"
     >
       <h1 className="text-2xl font-bold text-white hover:text-gray-400">
-        <Link to="/">Portfolio</Link>
+        <Link to="/">Mico Martin</Link>
       </h1>
 
       <div className="md:hidden">
