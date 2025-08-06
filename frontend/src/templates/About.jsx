@@ -25,13 +25,13 @@ function About() {
 
           <div className="text-sm sm:text-base space-y-4 leading-relaxed min-h-[260px] text-justify">
             <p>
-              Hello! I’m <span className="font-semibold text-purple-300"></span>
+              Hello! I’m Mico Martin <span className="font-semibold text-purple-300"></span>
               , currently a
               <span className="font-semibold text-purple-300">
                 {" "}
                 final-year Informatics student
               </span>{" "}
-              in
+              in President University
               <span className="font-semibold text-purple-300"></span>. Over the
               past several years, I’ve developed a strong interest in how
               technology can securely connect people, systems, and ideas — from
