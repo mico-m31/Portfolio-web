@@ -32,8 +32,7 @@ function About() {
                 final-year Informatics student
               </span>{" "}
               in President University
-              <span className="font-semibold text-purple-300"></span>. Over the
-              past several years, I’ve developed a strong interest in how
+              <span className="font-semibold text-purple-300"></span>. I’ve developed a strong interest in how
               technology can securely connect people, systems, and ideas — from
               the physical layer of networking to the logical components of
               backend systems.
