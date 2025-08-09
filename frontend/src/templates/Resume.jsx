@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import CV from "../assets/Cv_Mico-Martin..pdf";
+import CV from "../assets/CV_Mico-Martin..pdf";
 import { FaFilePdf } from "react-icons/fa6";
 
 function Resume() {
